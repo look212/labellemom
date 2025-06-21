@@ -2,6 +2,8 @@ import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import type { Metadata } from "next";
 import { env } from "@/config/env";
+import Navbar from "@/components/Navbar";
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: env.siteName,
@@ -35,103 +37,57 @@ const geistMono = Geist_Mono({
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src={`${env.basePath}/next.svg`}
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/pages/index.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="${basePath}/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <main className="flex flex-col items-center justify-center min-h-screen p-8">
+        <div className="flex space-x-5 mb-10">
+          <Image src={`${env.basePath}/images/logo.jpeg`} alt="labellemom" width={100} height={100}></Image>
+          <div>
+            <h1 className="font-bold text-xl">라벨르맘</h1>
+            <p className="pt-5">1인샵 산전,산후 전문 관리</p>
+            <p>산전,산후 전문관리 (용인,수원,동탄,분당..등 경기남부)</p>
+          </div>
+        </div>
+      
+        <p className="text-lg text-gray-700 mb-8">
+          여자의 일생에서 가장많은 몸의 변화를경험하게 되는 임신과 출산 <br />라벨르맘에서 아름다움과 건강의 회복을 위해 노력하겠습니다.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* 프로그램 카드 컴포넌트 추가 */}
+          <div className="bg-white shadow-md rounded-lg p-6">
+            <h2 className="text-xl font-semibold mb-2">이벤트</h2>
+            <p className="text-gray-600 mb-4">90,000원</p>
+            <p>체험 1회 (90분)</p>
+          </div>
+          <div className="bg-white shadow-md rounded-lg p-6">
+            <h2 className="text-xl font-semibold mb-2">프로그램</h2>
+            <p className="text-gray-600 mb-4">산전, 산후 관리</p>
+            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+              <Link href={`/programs`}>자세히 보기</Link>
+            </button>
+          </div>
+          <div className="bg-white shadow-md rounded-lg p-6">
+            <h2 className="text-xl font-semibold mb-2">이용안내</h2>
+            <p className="text-gray-600 mb-4">용인,동탄,수원,성남,오산 외 경기남부지역은 문의 주세요</p>
+            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+              <Link href={`/info`}>자세히 보기</Link>
+            </button>
+          </div>
+          <div className="bg-white shadow-md rounded-lg p-6">
+            <h2 className="text-xl font-semibold mb-2">커뮤니티</h2>
+            <p className="text-gray-600 mb-4">관리시 유의사항 및 참고사항, 관리 제품 안내</p>
+            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+              <Link href={`/community`}>자세히 보기</Link>
+            </button>
+          </div>
+          <div className="bg-white shadow-md rounded-lg p-6">
+            <h2 className="text-xl font-semibold mb-2">테라피스트</h2>
+            <p className="text-gray-600 mb-4">스파 및 통증 관리 4년, 산후조리원 4년, 산모전문 출장 6년</p>
+            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+              <Link href={`/therapist`}>자세히 보기</Link>
+            </button>
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="${basePath}/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="${basePath}/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="${basePath}/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
