@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
 import type { Metadata } from "next";
 import { env } from "@/config/env";
 import Link from 'next/link';
