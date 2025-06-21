@@ -23,12 +23,10 @@ export default function Navbar() {
         <ul className="hidden md:flex space-x-4 text-gray-700 text-sm font-medium">
           <li><Link href="/">홈</Link></li>
           <li><Link href="/programs">프로그램</Link></li>
-          <li><Link href="/info">이용 안내</Link></li>
+          <li><Link href="/community">커뮤니티</Link></li>
+          <li><Link href="/info">이용안내</Link></li>
           <li><Link href="/therapist">테라피스트</Link></li>
           <li><Link href="/event">이벤트</Link></li>
-          <li>
-            <a href="https://blog.naver.com/labellelani" target="_blank" rel="noopener noreferrer">블로그</a>
-          </li>
         </ul>
       </div>
 
@@ -37,12 +35,10 @@ export default function Navbar() {
         <ul className="md:hidden mt-2 space-y-2 text-gray-700 text-sm font-medium">
           <li><Link href="/" onClick={toggleMenu}>홈</Link></li>
           <li><Link href="/programs" onClick={toggleMenu}>관리 프로그램</Link></li>
-          <li><Link href="/info" onClick={toggleMenu}>이용 안내</Link></li>
+          <li><Link href="/community" onClick={toggleMenu}>커뮤니티</Link></li>
+          <li><Link href="/info" onClick={toggleMenu}>이용안내</Link></li>
           <li><Link href="/therapist" onClick={toggleMenu}>테라피스트</Link></li>
           <li><Link href="/event" onClick={toggleMenu}>이벤트</Link></li>
-          <li>
-            <a href="https://blog.naver.com/labellelani" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>블로그</a>
-          </li>
         </ul>
       )}
     </nav>

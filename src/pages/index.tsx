@@ -43,8 +43,10 @@ export default function Home() {
           {/* 프로그램 카드 컴포넌트 추가 */}
           <div className="bg-white shadow-md rounded-lg p-6">
             <h2 className="text-xl font-semibold mb-2">이벤트</h2>
-            <p className="text-gray-600 mb-4">90,000원</p>
-            <p>체험 1회 (90분)</p>
+            <p className="text-gray-600 mb-4">체험 1회 90,000원(90분)</p>
+            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+              <Link href={`/programs`}>자세히 보기</Link>
+            </button>
           </div>
           <div className="bg-white shadow-md rounded-lg p-6">
             <h2 className="text-xl font-semibold mb-2">프로그램</h2>
@@ -55,7 +57,7 @@ export default function Home() {
           </div>
           <div className="bg-white shadow-md rounded-lg p-6">
             <h2 className="text-xl font-semibold mb-2">이용안내</h2>
-            <p className="text-gray-600 mb-4">용인,동탄,수원,성남,오산 외 경기남부지역은 문의 주세요</p>
+            <p className="text-gray-600 mb-4">이용가능지역: 용인,동탄,수원,성남,오산</p>
             <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
               <Link href={`/info`}>자세히 보기</Link>
             </button>
