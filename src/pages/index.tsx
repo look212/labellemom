@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import type { Metadata } from "next";
 import { env } from "@/config/env";
-import Navbar from "@/components/Navbar";
 import Link from 'next/link';
 
 export const metadata: Metadata = {
