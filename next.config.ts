@@ -6,12 +6,12 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
-  basePath: "/labellemom", // GitHub Pages용 경로 설정
-  assetPrefix: '/labellemom', // GitHub Pages용 정적 자산 경로 설정
+  basePath: "", 
+  assetPrefix: '',
   env: {
-    NEXT_PUBLIC_BASE_PATH: '/labellemom', // 환경 변수 설정
+    NEXT_PUBLIC_BASE_PATH: '/', // 환경 변수 설정
     NEXT_PUBLIC_GITHUB_PAGES: 'true', // GitHub Pages 여부 설정
-    NEXT_PUBLIC_SITE_URL: 'https://look212.github.io/labellemom', // 사이트 URL 설정
+    NEXT_PUBLIC_SITE_URL: 'hhttp://www.labellemom.co.kr/', // 사이트 URL 설정
     NEXT_PUBLIC_SITE_NAME: '라벨르맘(Labellemom)', // 사이트 이름 설정
     NEXT_PUBLIC_SITE_DESCRIPTION: '1인샵 산전,산후 전문 관리', // 사이트 설명 설정
     NEXT_PUBLIC_SITE_IMAGE: 'https://labellemom.github.io/labellemom/og-image.png', // 사이트 이미지 설정
