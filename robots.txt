@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://look212.github.io/labellemom
+
+# Sitemaps
+Sitemap: https://look212.github.io/labellemom/sitemap.xml
