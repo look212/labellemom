@@ -7,6 +7,7 @@ const nextConfig = {
   },
   trailingSlash: true,
   basePath: "/labellemom", // GitHub Pages용 경로 설정
+  assetPrefix: '/labellemom', // GitHub Pages용 정적 자산 경로 설정
   env: {
     NEXT_PUBLIC_BASE_PATH: '/labellemom', // 환경 변수 설정
     NEXT_PUBLIC_GITHUB_PAGES: 'true', // GitHub Pages 여부 설정

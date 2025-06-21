@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 bg-white shadow-md px-4 py-3">
       <div className="flex items-center justify-between">
-        <div className="text-xl font-bold text-gray-800">라벨르맘</div>
+        <div className="text-xl font-bold text-gray-800"><Link href="/">라벨르맘</Link></div>
 
         {/* Mobile menu button */}
         <div className="md:hidden">
