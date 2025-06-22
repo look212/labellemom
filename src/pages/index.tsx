@@ -35,7 +35,7 @@ export default function Home() {
     <>
       <main className="flex flex-col items-center justify-center min-h-screen p-8">
         <div className="flex space-x-5 mb-10">
-          <Image src={`/images/logo.jpeg`} alt="labellemom" width={100} height={100}></Image>
+          <Image src="/images/logo.jpeg" alt="labellemom" width={100} height={100}></Image>
           <div>
             <h1 className="font-bold text-xl">라벨르맘</h1>
             <p className="pt-5">1인샵 산전,산후 전문 관리</p>
@@ -53,7 +53,7 @@ export default function Home() {
             <div key={idx} className="mb-4">
               <h2 className="text-xl font-semibold mb-2">{item.label}</h2>
               <p className="text-gray-600 mb-4">{item.desc}</p>
-              <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+              <button className="bg-zinc-400 dark:bg-gray-900 text-white px-4 py-2 rounded hover:bg-zinc-600 dark:hover:bg-gray-800">
                 <Link href={item.href}>자세히 보기</Link>
               </button>
             </div>

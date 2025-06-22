@@ -1,20 +1,21 @@
+import Image from 'next/image';
+
 export default function EventPage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8">
-      <h1 className="text-3xl font-bold mb-4">테라피스트</h1>
-      <p className="text-lg text-gray-700 mb-8">
-        라벨르맘의 특별한 이벤트를 소개합니다.
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {/* 이벤트 카드 컴포넌트 추가 */}
-        <div className="bg-white shadow-md rounded-lg p-6">
-          <h2 className="text-xl font-semibold mb-2">이벤트 이름</h2>
-          <p className="text-gray-600 mb-4">이벤트 설명이 여기에 들어갑니다.</p>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-            자세히 보기
-          </button>
+    <div className="flex flex-col items-center min-h-screen p-8">
+      <h1 className="text-2xl font-bold pb-2 text-left w-full border-b-1 border-stone-300">테라피스트</h1>
+      <div className="w-full space-y-8 border-b-1 border-stone-200 pb-8 pt-8">
+        <div>
+          <Image src="/images/certificate_01.jpeg" alt="미용사 면허증" className="w-full h-auto object-cover max-w-3xl" width={720} height={450} />
         </div>
-        {/* 추가 이벤트 카드 */}
+      </div>
+      <div className="w-full space-y-8 pb-8 pt-8">
+        <h2 className="text-1xl font-bold mb-4">라니테라피스트</h2>
+        <ul className="list-disc pl-5 space-y-2">
+          <li className="text-gray-700">스파 및 통증 관리 4년(강남역삼,판교,분당정자)</li>
+          <li className="text-gray-700">산후조리원 4년(강남,홍대,판교)</li>
+          <li className="text-gray-700">산모전문 출장 6년</li>
+        </ul>
       </div>
     </div>
   );
