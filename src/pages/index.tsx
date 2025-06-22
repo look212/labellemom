@@ -24,6 +24,13 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
+    const card = [
+      {href: '/programs', label: '프로그램', desc: '산전, 산후 관리 프로그램'},
+      {href: '/community', label: '커뮤니티', desc: '관리시 유의사항 및 참고사항, 관리 제품 안내'},
+      {href: '/info', label: '이용안내', desc: '이용가능지역: 용인,동탄,수원,성남,오산'},
+      {href: '/therapist', label: '테라피스트', desc: '스파 및 통증 관리 4년, 산후조리원 4년, 산모전문 출장 6년'},
+      {href: '/event', label: '이벤트', desc: '체험 1회 90,000원(90분)'},
+    ];
   return (
     <>
       <main className="flex flex-col items-center justify-center min-h-screen p-8">
@@ -41,41 +48,17 @@ export default function Home() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* 프로그램 카드 컴포넌트 추가 */}
-          <div className="bg-white shadow-md rounded-lg p-6">
-            <h2 className="text-xl font-semibold mb-2">이벤트</h2>
-            <p className="text-gray-600 mb-4">체험 1회 90,000원(90분)</p>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-              <Link href={`/programs`}>자세히 보기</Link>
-            </button>
-          </div>
-          <div className="bg-white shadow-md rounded-lg p-6">
-            <h2 className="text-xl font-semibold mb-2">프로그램</h2>
-            <p className="text-gray-600 mb-4">산전, 산후 관리</p>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-              <Link href={`/programs`}>자세히 보기</Link>
-            </button>
-          </div>
-          <div className="bg-white shadow-md rounded-lg p-6">
-            <h2 className="text-xl font-semibold mb-2">이용안내</h2>
-            <p className="text-gray-600 mb-4">이용가능지역: 용인,동탄,수원,성남,오산</p>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-              <Link href={`/info`}>자세히 보기</Link>
-            </button>
-          </div>
-          <div className="bg-white shadow-md rounded-lg p-6">
-            <h2 className="text-xl font-semibold mb-2">커뮤니티</h2>
-            <p className="text-gray-600 mb-4">관리시 유의사항 및 참고사항, 관리 제품 안내</p>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-              <Link href={`/community`}>자세히 보기</Link>
-            </button>
-          </div>
-          <div className="bg-white shadow-md rounded-lg p-6">
-            <h2 className="text-xl font-semibold mb-2">테라피스트</h2>
-            <p className="text-gray-600 mb-4">스파 및 통증 관리 4년, 산후조리원 4년, 산모전문 출장 6년</p>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-              <Link href={`/therapist`}>자세히 보기</Link>
-            </button>
-          </div>
+          {card.map((item, idx) => (
+            <div className="bg-white shadow-md rounded-lg p-6 dark:bg-gray-800 dark:text-white" key={idx}>
+            <div key={idx} className="mb-4">
+              <h2 className="text-xl font-semibold mb-2">{item.label}</h2>
+              <p className="text-gray-600 mb-4">{item.desc}</p>
+              <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                <Link href={item.href}>자세히 보기</Link>
+              </button>
+            </div>
+            </div>
+          ))}
         </div>
       </main>
     </>

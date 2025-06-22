@@ -7,10 +7,19 @@ export default function Navbar() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const nav = [
+    {href: '/', label: '홈'},
+    {href: '/programs', label: '프로그램'},
+    {href: '/community', label: '커뮤니티'},
+    {href: '/info', label: '이용안내'},
+    {href: '/therapist', label: '테라피스트'},
+    {href: '/event', label: '이벤트'},
+  ];
+
   return (
-    <nav className="sticky top-0 bg-white shadow-md px-4 py-3">
+    <nav className="sticky top-0 bg-white shadow-md px-4 py-3 dark:bg-gray-800 dark:text-white">
       <div className="flex items-center justify-between">
-        <div className="text-xl font-bold text-gray-800"><Link href="/">라벨르맘</Link></div>
+        <div className="text-xl font-bold text-gray-800 dark:text-white"><Link href="/">라벨르맘</Link></div>
 
         {/* Mobile menu button */}
         <div className="md:hidden">
@@ -21,24 +30,26 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-4 text-gray-700 text-sm font-medium">
-          <li><Link href="/">홈</Link></li>
-          <li><Link href="/programs">프로그램</Link></li>
-          <li><Link href="/community">커뮤니티</Link></li>
-          <li><Link href="/info">이용안내</Link></li>
-          <li><Link href="/therapist">테라피스트</Link></li>
-          <li><Link href="/event">이벤트</Link></li>
+            {nav.map((item, idx) => (
+              <li key={idx}>
+                <Link href={item.href} className="hover:text-blue-500 dark:hover:text-blue-400 dark:text-white">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
         </ul>
       </div>
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <ul className="md:hidden mt-2 space-y-2 text-gray-700 text-sm font-medium">
-          <li><Link href="/" onClick={toggleMenu}>홈</Link></li>
-          <li><Link href="/programs" onClick={toggleMenu}>관리 프로그램</Link></li>
-          <li><Link href="/community" onClick={toggleMenu}>커뮤니티</Link></li>
-          <li><Link href="/info" onClick={toggleMenu}>이용안내</Link></li>
-          <li><Link href="/therapist" onClick={toggleMenu}>테라피스트</Link></li>
-          <li><Link href="/event" onClick={toggleMenu}>이벤트</Link></li>
+        <ul className="md:hidden mt-2 space-y-2 text-gray-700 text-sm font-medium dark:text-white">
+            {nav.map((item, idx) => (
+              <li key={idx}>
+                <Link href={item.href} onClick={toggleMenu} className="hover:text-blue-500 dark:hover:text-blue-400 dark:text-white">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
         </ul>
       )}
     </nav>
