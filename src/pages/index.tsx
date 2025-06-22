@@ -35,7 +35,7 @@ export default function Home() {
     <>
       <main className="flex flex-col items-center justify-center min-h-screen p-8">
         <div className="flex space-x-5 mb-10">
-          <Image src={`/images/logo.jpeg`} alt="labellemom" width={100} height={100}></Image>
+          <Image src="/images/logo.jpeg" alt="labellemom" width={100} height={100}></Image>
           <div>
             <h1 className="font-bold text-xl">라벨르맘</h1>
             <p className="pt-5">1인샵 산전,산후 전문 관리</p>
