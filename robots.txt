@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://labellemom.co.kr/sitemap.xml
+Sitemap: https://www.labellemom.co.kr/sitemap.xml
