@@ -32,7 +32,7 @@ export default function Navbar() {
         <ul className="hidden md:flex space-x-4 text-gray-700 text-sm font-medium">
             {nav.map((item, idx) => (
               <li key={idx}>
-                <Link href={item.href} className="hover:text-blue-500 dark:hover:text-blue-400 dark:text-white">
+                <Link href={item.href} className="hover:text-zinc-500 dark:hover:text-zinc-400 dark:text-white">
                   {item.label}
                 </Link>
               </li>
@@ -45,7 +45,7 @@ export default function Navbar() {
         <ul className="md:hidden mt-2 space-y-2 text-gray-700 text-sm font-medium dark:text-white">
             {nav.map((item, idx) => (
               <li key={idx}>
-                <Link href={item.href} onClick={toggleMenu} className="hover:text-blue-500 dark:hover:text-blue-400 dark:text-white">
+                <Link href={item.href} onClick={toggleMenu} className="hover:text-zinc-500 dark:hover:text-zinc-400 dark:text-white">
                   {item.label}
                 </Link>
               </li>

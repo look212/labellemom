@@ -53,7 +53,7 @@ export default function Home() {
             <div key={idx} className="mb-4">
               <h2 className="text-xl font-semibold mb-2">{item.label}</h2>
               <p className="text-gray-600 mb-4">{item.desc}</p>
-              <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+              <button className="bg-zinc-400 dark:bg-gray-900 text-white px-4 py-2 rounded hover:bg-zinc-600 dark:hover:bg-gray-800">
                 <Link href={item.href}>자세히 보기</Link>
               </button>
             </div>

@@ -23,7 +23,7 @@ export default function ProgramsPage() {
           혈액순환 촉진 및 튼살예방 보습관리
         </p>
       </div>
-      <div className="w-full space-y-8 border-b-1 border-stone-200 pb-8 pt-8">
+      <div className="w-full space-y-8 pb-8 pt-8">
         <h2 className="text-1xl font-bold mb-4">산후관리</h2>
         <div>
           <Image src="/images/program_03.jpeg" alt="산후 이미지" className="w-full h-auto object-cover" width={720} height={450} />
