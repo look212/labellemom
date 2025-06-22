@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://look212.github.io/labellemom
+Host: https://labellemom.co.kr
 
 # Sitemaps
-Sitemap: https://look212.github.io/labellemom/sitemap.xml
+Sitemap: https://labellemom.co.kr/sitemap.xml
