@@ -17,14 +17,14 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 bg-white shadow-md px-4 py-3 dark:bg-gray-800 dark:text-white">
+    <nav className="sticky top-0 bg-white shadow-md px-4 py-3">
       <div className="flex items-center justify-between">
-        <div className="text-xl font-bold text-gray-800 dark:text-white"><Link href="/">라벨르맘</Link></div>
+        <div className="text-xl font-bold text-gray-800"><Link href="/">라벨르맘</Link></div>
 
         {/* Mobile menu button */}
         <div className="md:hidden">
           <button onClick={toggleMenu}>
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className="w-6 h-6 dark:stroke-gray-800" /> : <Menu className="w-6 h-6 dark:stroke-gray-800" />}
           </button>
         </div>
 
@@ -32,7 +32,7 @@ export default function Navbar() {
         <ul className="hidden md:flex space-x-4 text-gray-700 text-sm font-medium">
             {nav.map((item, idx) => (
               <li key={idx}>
-                <Link href={item.href} className="hover:text-zinc-500 dark:hover:text-zinc-400 dark:text-white">
+                <Link href={item.href} className="hover:text-zinc-500">
                   {item.label}
                 </Link>
               </li>
@@ -42,10 +42,10 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <ul className="md:hidden mt-2 space-y-2 text-gray-700 text-sm font-medium dark:text-white">
+        <ul className="md:hidden mt-2 space-y-2 text-gray-700 text-sm font-medium">
             {nav.map((item, idx) => (
               <li key={idx}>
-                <Link href={item.href} onClick={toggleMenu} className="hover:text-zinc-500 dark:hover:text-zinc-400 dark:text-white">
+                <Link href={item.href} onClick={toggleMenu} className="hover:text-zinc-500">
                   {item.label}
                 </Link>
               </li>

@@ -33,32 +33,34 @@ export default function Home() {
     ];
   return (
     <>
-      <main className="flex flex-col items-center justify-center min-h-screen p-8">
-        <div className="flex space-x-5 mb-10">
-          <Image src="/images/logo.jpeg" alt="labellemom" width={100} height={100}></Image>
-          <div>
-            <h1 className="font-bold text-xl">라벨르맘</h1>
-            <p className="pt-5">1인샵 산전,산후 전문 관리</p>
-            <p>산전,산후 전문관리 (용인,수원,동탄,분당..등 경기남부)</p>
+      <main className="flex flex-col items-center">
+        <div className="bg-beige w-full h-84 text-white gap-4">
+          {/* <div className="absolute bg-black opacity-50 w-full h-full"></div> */}
+          <div className="h-84 flex items-center justify-center gap-4 flex-col text-center">
+            <Image src="/images/logo.jpeg" alt="labellemom"className="h-full w-auto" width={0} height={0}></Image>
+            {/* <div>
+              <h1 className="font-bold text-xl text-center">라벨르맘</h1>
+              <p className="text-center">산전,산후 전문관리 (용인,수원,동탄,분당..등 경기남부)</p>
+            </div> */}
           </div>
         </div>
-      
-        <p className="text-lg text-gray-700 mb-8">
-          여자의 일생에서 가장많은 몸의 변화를경험하게 되는 임신과 출산 <br />라벨르맘에서 아름다움과 건강의 회복을 위해 노력하겠습니다.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="pt-5">
+          <h1 className="font-bold text-2xl text-center text-gray-700">라벨르맘</h1>
+          <p className="font-bold text-xl text-center text-gray-700">1인샵 산전산후 전문관리</p>
+          <p className="p-5 text-sm text-center tracking-tight">몸과 마음이 가장 많은 변화를 경험하게 되는 시기<br />맞춤 테라피로 건강을 회복하실 수 있도록 도와드리겠습니다.</p>
+        </div>
+        <div className="w-full border-t-gray-200 border-t-10 border-b-gray-200 border-b-10">
           {/* 프로그램 카드 컴포넌트 추가 */}
           {card.map((item, idx) => (
-            <div className="bg-white shadow-md rounded-lg p-6 dark:bg-gray-800 dark:text-white" key={idx}>
-            <div key={idx} className="mb-4">
-              <h2 className="text-xl font-semibold mb-2">{item.label}</h2>
-              <p className="text-gray-600 mb-4">{item.desc}</p>
-              <button className="bg-zinc-400 dark:bg-gray-900 text-white px-4 py-2 rounded hover:bg-zinc-600 dark:hover:bg-gray-800">
-                <Link href={item.href}>자세히 보기</Link>
-              </button>
-            </div>
+            <div className={`bg-beige text-brown p-4 ${
+              idx !== 0 ? 'border-t border-rose-100' : ''
+            }`} key={`menu_${idx}`}>
+              <Link href={item.href}>{item.label}</Link>
             </div>
           ))}
+        </div>
+        <div>
+          
         </div>
       </main>
     </>

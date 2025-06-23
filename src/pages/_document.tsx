@@ -3,7 +3,7 @@ import { env } from "@/config/env";
 
 export default function Document() {
   return (
-    <Html lang={env.siteLocale} className="dark:bg-gray-900 dark:text-gray-100">
+    <Html lang={env.siteLocale}>
       <Head>
         <title>{env.siteName}</title>
         <meta name="description" content={env.siteDescription} />

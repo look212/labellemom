@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ArrowUp, Phone, MessageSquareMore } from 'lucide-react';
+import { ArrowUp, MessageSquareMore } from 'lucide-react';
 
 export default function FloatingButtons() {
   const [showTopBtn, setShowTopBtn] = useState(false);
@@ -19,7 +19,7 @@ export default function FloatingButtons() {
   };
 
   return (
-    <div className="fixed bottom-6 right-4 space-y-3 z-50">
+    <div className="fixed bottom-6 right-4 space-y-3 z-30">
       <a
         href="https://talk.naver.com/ct/w4nej8"
         target="_blank"
@@ -29,10 +29,10 @@ export default function FloatingButtons() {
         <MessageSquareMore className="w-5 h-5 inline-block" />
       </a>
       <a
-        href="tel:01076131390"
-        className="block bg-blue-500 text-white rounded-full shadow-lg p-3 hover:bg-blue-600 transition"
+        href="https://open.kakao.com/o/sVVD2l0b"
+        className="block bg-yellow-500 text-white rounded-full shadow-lg p-3 hover:bg-yellow-600 transition"
       >
-        <Phone className="w-5 h-5 inline-block" />
+        <MessageSquareMore className="w-5 h-5 inline-block" />
       </a>
       {showTopBtn && (
         <button
