@@ -30,6 +30,8 @@ export default function FloatingButtons() {
       </a>
       <a
         href="https://open.kakao.com/o/sVVD2l0b"
+        target="_blank"
+        rel="noopener noreferrer"
         className="block bg-yellow-500 text-white rounded-full shadow-lg p-3 hover:bg-yellow-600 transition"
       >
         <MessageSquareMore className="w-5 h-5 inline-block" />
