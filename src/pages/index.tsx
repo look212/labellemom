@@ -29,7 +29,7 @@ export default function Home() {
       {href: '/community', label: '커뮤니티', desc: '관리시 유의사항 및 참고사항, 관리 제품 안내'},
       {href: '/info', label: '이용안내', desc: '이용가능지역: 용인,동탄,수원,성남,오산'},
       {href: '/therapist', label: '테라피스트', desc: '스파 및 통증 관리 4년, 산후조리원 4년, 산모전문 출장 6년'},
-      {href: '/event', label: '이벤트', desc: '체험 1회 90,000원(90분)'},
+      // {href: '/event', label: '이벤트', desc: '체험 1회 90,000원(90분)'},
     ];
   return (
     <>
@@ -59,8 +59,16 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div>
-          
+        <div className="flex flex-col items-center p-5 w-full">
+          <h2 className="text-middle-brown font-bold text-left w-full pb-4">이벤트</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 w-full">
+            <Link href="/event" className="w-full">
+              <div className="w-full bg-beige shadow-md p-10 text-center">
+                <p className="text-xl font-semibold mb-2">첫관리 체험 90분</p>
+                <p className="text-gray-700">90,000원</p>
+              </div>
+            </Link>
+          </div>
         </div>
       </main>
     </>
