@@ -13,10 +13,7 @@ export const metadata: Metadata = {
     siteName: env.siteName,
     images: [
       {
-        url: "https://nextjs.org/og.png",
-        width: 1200,
-        height: 630,
-        alt: "Next.js Open Graph Image",
+        url: "/images/logo.jpeg",
       },
     ],
     locale: env.siteLocale,
