@@ -1,19 +1,30 @@
 import Head from "next/head";
 import { env } from "@/config/env";
 
-export default function Seo() {
+type SeoProps = {
+  title?: string;
+  description?: string;
+  image?: string;
+  url?: string;
+};
+
+export default function Seo({
+  title = env.siteName,
+  description = env.siteDescription,
+  image = env.siteImage,
+  url = env.siteUrl,
+}: SeoProps) {
     return (
         <Head>
-            <title>{env.siteName}</title>
-            <meta name="description" content={env.siteDescription} />
+            <title>{title ? title : env.siteName}</title>
+            <meta name="description" content={description ? description : env.siteDescription} />
             <meta name="keywords" content={env.siteKeywords} />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/favicon.ico" />
             <meta property="og:title" content={env.siteName} />
             <meta property="og:description" content={env.siteDescription} />
-            <meta property="og:url" content={env.siteUrl} />
+            <meta property="og:url" content={url ? url : env.siteUrl} />
             <meta property="og:site_name" content={env.siteName} />
-            <meta property="og:image" content={env.siteImage} />
+            <meta property="og:image" content={image ? image : env.siteImage} />
             <meta property="og:locale" content={env.siteLocale} />
             <meta property="og:type" content={env.siteType} />
             <meta name="robots" content="index,follow" />
