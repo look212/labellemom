@@ -15,7 +15,7 @@ export default function EventPage() {
               <li className="text-gray-700">산모전문 출장 7년</li>
             </ul>
           </div>
-          <Image src="/images/certificate_01.jpeg" alt="미용사 면허증" className="flex-none" width={100} height={100} />
+          <Image src="/images/certificate_01.jpeg" alt="라벨르맘 미용사 면허증" className="flex-none" width={100} height={100} />
         </div>
       </div>
     </div>
