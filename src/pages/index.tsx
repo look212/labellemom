@@ -60,7 +60,7 @@ export default function Home() {
           ))}
         </div>
         <div className="flex flex-col items-center p-5 w-full">
-          <h2 className="text-middle-brown font-bold text-left w-full pb-4">이벤트</h2>
+          <h2 className="text-middle-brown font-bold text-left w-full pb-4">라벨르맘 이벤트</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 w-full">
             <Link href="/event" className="w-full">
               <div className="w-full bg-beige shadow-md p-10 text-center">

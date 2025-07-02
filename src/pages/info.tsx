@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function EventPage() {
   return (
     <div className="flex flex-col items-center p-5">
-      <h1 className="text-2xl font-bold pb-2 text-left w-full border-b-1 border-stone-300">이용안내</h1>
+      <h1 className="text-2xl font-bold pb-2 text-left w-full border-b-1 border-stone-300">라벨르맘 이용안내</h1>
       <div className="w-full space-y-8 border-b-1 border-stone-200 pb-8 pt-8">
         <h2 className="text-1xl font-bold mb-4 text-middle-brown">이용가능 지역</h2>
         <p className="text-gray-700 font-medium">
