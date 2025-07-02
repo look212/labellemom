@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.labellemom.co.kr
+Host: https://labellemom.co.kr
 
 # Sitemaps
-Sitemap: https://www.labellemom.co.kr/sitemap.xml
+Sitemap: https://labellemom.co.kr/sitemap.xml
