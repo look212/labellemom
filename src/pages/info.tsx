@@ -14,7 +14,7 @@ export default function EventPage() {
         <h2 className="text-1xl font-bold mb-4 text-middle-brown">관리요금</h2>
         <p className="text-gray-700 font-medium">*산전.산후 요금동일 합니다.</p>
         <div>
-          <Image src="/images/info_01.jpeg" alt="관리요금" className="w-full h-auto object-cover" width={720} height={450} />
+          <Image src="/images/info_01.jpeg" alt="라벨르맘 관리요금" className="w-full h-auto object-cover" width={720} height={450} />
         </div>
       </div>
       <div className="w-full space-y-8 p-4 bg-zinc-800 align-center">

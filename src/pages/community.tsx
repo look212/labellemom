@@ -21,8 +21,8 @@ export default function EventPage() {
         <h2 className="text-1xl font-bold mb-4 text-middle-brown">관리 제품</h2>
         <p className="text-gray-700 m-2">*만다린올리브오일</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 m-0">
-          <Image src="/images/community_01.jpeg" alt="만다린올리브오일 이미지" className="w-full h-auto object-cover" width={720} height={450} />
-          <Image src="/images/community_02.jpeg" alt="만다린올리브오일 이미지" className="w-full h-auto object-cover" width={720} height={450} />
+          <Image src="/images/community_01.jpeg" alt="라벨르맘 만다린올리브오일 이미지" className="w-full h-auto object-cover" width={720} height={450} />
+          <Image src="/images/community_02.jpeg" alt="라벨르맘 만다린올리브오일 이미지" className="w-full h-auto object-cover" width={720} height={450} />
         </div>
         <p className="text-gray-700 border-b-1 border-stone-200 pb-8 pt-8 m-0">
           *르노벨 데아롬 그레이<br />
