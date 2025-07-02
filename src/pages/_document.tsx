@@ -7,7 +7,7 @@ export default function Document() {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="naver-site-verification" content="e46a566a12cf5eaa343ee6e1eca5ce21512c2eab" />
+        <meta name="naver-site-verification" content="434f1d1c9e1f4880ce8892fedae7b77ffe5a5cc6" />
         <link rel="canonical" href={env.siteUrl} />
       </Head>
       <body className="antialiased">
